@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ourmenu.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+         #clearButton {
+            padding: 5px 12px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+margin-bottom: 0;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        #clearButton:hover {
+            background-color: #d32f2f;
+        }
+        /* Add your CSS styles here */
+        .note-icon {
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .note-box {
+            display: none;
+            width: 100%;
+            height: 50px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="links">
+        <ul>
+            <li><a href="index.html">Home</a></li>&nbsp;
+            <li><a href="ourmenu.html">Create Menu</a></li>&nbsp;
+            <li><a href="videos.html">Our Menu</a></li>&nbsp;
+            <li><a href="calculator.html">KNY</a></li>&nbsp;
+            <li><a href ="#explore">Explore</a></li>&nbsp
+            <li><a href="chat/public/index.html">Community Chat</a></li>&nbsp;
+        </ul>
+    </div>
+    <div class="page">
+        
+        <div class="top"></div>
+       
+        <div class="head">
+            <h1>Create Menu</h1>
+        </div>
+        <div class="content">
+            <input type="text" placeholder="Add new item" id="myInput" >
+            <span onclick="newElement()" class="addBtn">
+                <i class="fa-solid fa-plus"></i>
+            </span>
+            <ul id="myUL">
+                <!-- List items will be dynamically added here -->
+            </ul>
+            <div class="btn">
+                <button id="clearButton">New List</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Function to store the list in local storage
+        function saveListToLocalStorage() {
+            const listItems = Array.from(document.querySelectorAll('#myUL li')).map(li => li.textContent);
+            localStorage.setItem('menuList', JSON.stringify(listItems));
+        }
+
+        let person = prompt("Please enter your name");
+
+        if (person != null) {
+            document.querySelector(".top").innerHTML = person + "'s list";
+        } else {
+            alert("You have not entered any name");
+        }
+
+        // Function to save notes to local storage
+        function saveNotesToLocalStorage() {
+            const listItems = Array.from(document.querySelectorAll('#myUL li')).map(li => {
+                const noteBox = li.querySelector(".note-box");
+                return {
+                    text: li.textContent,
+                    note: noteBox.value
+                };
+            });
+            localStorage.setItem('menuListNotes', JSON.stringify(listItems));
+        }
+
+        // Function to load list from local storage
+        function loadListFromLocalStorage() {
+            const savedListJSON = localStorage.getItem('menuList');
+            if (savedListJSON) {
+                const savedList = JSON.parse(savedListJSON);
+                savedList.forEach(item => {
+                    const li = document.createElement("li");
+                    li.textContent = item;
+                    document.getElementById("myUL").appendChild(li);
+                    addNoteBox(li);
+                });
+            }
+        }
+
+        // Function to load notes from local storage
+        function loadNotesFromLocalStorage() {
+            const savedNotesJSON = localStorage.getItem('menuListNotes');
+            if (savedNotesJSON) {
+                const savedNotes = JSON.parse(savedNotesJSON);
+                const noteBoxes = document.querySelectorAll('.note-box');
+                savedNotes.forEach((item, index) => {
+                    noteBoxes[index].value = item.note;
+                });
+            }
+        }
+
+        function addNoteBox(li) {
+            const noteBox = document.createElement("textarea");
+            noteBox.classList.add("note-box");
+            li.appendChild(noteBox);
+            
+            const noteIcon = document.createElement("i");
+            noteIcon.classList.add("fa-solid", "fa-pencil", "note-icon");
+            noteIcon.onclick = () => toggleNoteBox(li);
+            li.appendChild(noteIcon);
+        }
+
+        function toggleNoteBox(li) {
+            const noteBox = li.querySelector(".note-box");
+            noteBox.style.display = noteBox.style.display === "none" ? "block" : "none";
+            saveNotesToLocalStorage();
+        }
+
+        function newElement() {
+            var li = document.createElement("li");
+            var inputValue = document.getElementById("myInput").value;
+            var t = document.createTextNode(inputValue);
+            li.appendChild(t);
+
+            if (inputValue === '') {
+                alert("You must write something!");
+            } else {
+                document.getElementById("myUL").appendChild(li);
+                addNoteBox(li);
+                saveListToLocalStorage();
+            }
+
+            document.getElementById("myInput").value = "";
+        }
+
+        const clearButton = document.getElementById('clearButton');
+        clearButton.addEventListener('click', () => {
+            const listContainer = document.getElementById('myUL');
+            listContainer.innerHTML = '';
+            localStorage.removeItem('menuList');
+            localStorage.removeItem('menuListNotes');
+        });
+
+        // Load saved list and notes when the page loads
+        window.addEventListener('DOMContentLoaded', function() {
+            loadListFromLocalStorage();
+            loadNotesFromLocalStorage();
+        });
+    </script>
+</body>
+</html>
