@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate BMI</title>
+    <link rel = "stylesheet" href = "calculator.css">
+</head>
+
+<body>
+    <div class="links">
+        <ul>
+            <li><a href="index.html">Home</a></li>&nbsp;
+            <li><a href="ourmenu.html">Create Menu</a></li>&nbsp;
+            <li><a href="videos.html">Our Menu</a></li>&nbsp;
+            <li><a href="calculator.html">KNY</a></li>&nbsp;
+            <li><a href ="#explore">Explore</a></li>&nbsp
+            <li><a href="chat/public/index.html">Community Chat</a></li>&nbsp;
+        </ul>
+    </div>
+    <div class="mainpage">
+    <div class="page">
+        <div class="head">
+            <p><b>Know Your Health👩‍⚕️</b></p>
+        </div>
+        <div class="content">
+            <p>Enter your Weight:<span>
+                    <input type="text" placeholder="(in kg)" id="weight"></span></p>
+            <br>
+            <p>Enter your height:<span>
+                    <input type="number" id="feet" placeholder="height in feet">&nbsp &nbsp
+                    <input type="number" id="inch" placeholder="height in inch"></span></p>
+        </div>
+        <div class="btn">
+            <button id="calculate">Calculate🧮</button>
+        </div>
+        <div class="output">
+             Your BMI: <span id="result"></span>
+        </div>
+        <div class="category">
+            Category: <span id="category"></span>
+        </div>
+        <div class="suggestion">
+            Opinion: <span id="suggestion"></span>
+        </div>
+    </div>
+    <div class="page2">
+     
+
+
+    <div class="container">
+        <div class="head"><b>Food Suggestions Based on Age and Gender </b></div>
+        <label for="age">Select Your Age:</label>
+        <select id="age">
+            <option value="child">Under 18</option>
+            <option value="adult">18 - 60</option>
+            <option value="senior">60+</option>
+        </select>
+        <label for="gender">Select Your Gender:</label>
+        <select id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <div class="suggestion" id="foodSuggestion">
+          
+        </div>
+    </div>
+  
+
+</div>
+    <script>
+        document.getElementById("calculate").addEventListener("click", function () {
+            const feet = parseFloat(document.getElementById("feet").value);
+            const inch = parseFloat(document.getElementById("inch").value);
+            const weight = parseFloat(document.getElementById("weight").value);
+
+            if (isNaN(feet) || isNaN(inch) || isNaN(weight)) {
+                alert("Please enter valid numeric values.");
+                return;
+            }
+
+            const totalHeightInInches = feet * 12 + inch;
+            const totalHeightInMeters = totalHeightInInches * 0.0254; // Convert inches to meters
+            const BMI = weight / (totalHeightInMeters * totalHeightInMeters);
+
+            document.getElementById("result").textContent = BMI.toFixed(2);
+
+            const categoryElement = document.getElementById("category");
+            const suggestionElement=document.getElementById("suggestion");
+
+            if (BMI < 18.5) {
+                categoryElement.textContent = "Underweight";
+suggestionElement.textContent="Your journey to health is commendable. Remember, your worth isn't defined by a number. Embrace this opportunity to nourish your body and prioritize your well-being. Surround yourself with positivity and seek guidance from professionals. Progress takes time, but with dedication and a positive mindset, you'll succeed.Celebrate victories, be kind to yourself during setbacks, and believe in your strength. You've got this!"
+
+            } else if (BMI >= 18.5 && BMI <= 24.9) {
+                categoryElement.textContent = "Normal Weight";
+                suggestionElement.textContent="I want to celebrate your commitment to maintaining a healthy and balanced lifestyle. Your dedication to your well-being is truly inspiring. Remember, a normal weight reflects your balanced approach to nutrition and fitness. Keep nurturing your body with wholesome choices and staying active. Your wellness journey sets a great example for those around you. Keep up the wonderful work!"
+            } else if (BMI >= 25 && BMI <= 29.9) {
+                categoryElement.textContent = "Overweight";
+                suggestionElement.textContent="I want to commend your desire to prioritize your health and well-being. Taking steps toward a healthier lifestyle is a significant achievement. Remember, your journey is about progress, not perfection. With determination and a positive outlook, you can make meaningful changes. Focus on nourishing your body with nutritious choices and finding enjoyable ways to stay active. Your commitment to a healthier you is truly commendable, and I believe in your ability to succeed.";
+            } else if (BMI >= 30 && BMI <= 34.9) {
+                categoryElement.textContent = "Obese Class I";
+                suggestionElement.textContent="I'm inspired by your decision to embark on a journey towards improved health. Recognizing the need for positive change is a courageous step. Remember, every small effort you make adds up to big results. You have the strength to overcome challenges and create a healthier lifestyle. Prioritize nourishing your body with balanced choices and incorporating enjoyable physical activities. Your determination to achieve well-being is remarkable, and I'm here to support you all the way."
+            } else if (BMI >= 35 && BMI <= 39.9) {
+                categoryElement.textContent = "Obese Class II";
+                suggestionElement.textContent="Your commitment to better health is truly commendable. Your journey towards overcoming obstacles and embracing a healthier lifestyle is inspiring. Remember, each choice you make brings you closer to your goals. Your determination and resilience are your greatest assets. Prioritize nourishing your body with nutritious foods and finding joy in active pursuits. Your dedication to positive change is remarkable, and I have no doubt that you will continue to make significant progress."
+            } else {
+                categoryElement.textContent = "Obese Class III (Morbidly Obese)";
+                suggestionElement.textContent="Your dedication to your health and well-being is both admirable and inspiring. Your journey toward positive change is a testament to your strength and determination. Remember, every step you take towards a healthier lifestyle is a step towards a brighter future. Focus on nourishing your body with care and finding enjoyable ways to stay active. Your commitment to transformation is truly remarkable, and I'm here to support you every step of the way."
+            }
+
+        });
+        
+        const ageSelect = document.getElementById("age");
+        const genderSelect = document.getElementById("gender");
+        const foodSuggestion = document.getElementById("foodSuggestion");
+
+        ageSelect.addEventListener("change", showFoodSuggestion);
+        genderSelect.addEventListener("change", showFoodSuggestion);
+
+        function showFoodSuggestion() {
+            const age = ageSelect.value;
+            const gender = genderSelect.value;
+
+            if (age === "child") {
+                if (gender === "male") {
+                    foodSuggestion.textContent = "Consider including more fruits, vegetables, and whole grains in your diet for healthy growth.";
+                } else if (gender === "female") {
+                    foodSuggestion.textContent = "Focus on a balanced diet with plenty of nutrient-rich foods to support your growth and development.";
+                } else {
+                    foodSuggestion.textContent = "Choose a variety of foods that provide essential nutrients for your growth and well-being.";
+                }
+            } else if (age === "adult") {
+                if (gender === "male") {
+                    foodSuggestion.textContent = "Opt for lean protein sources, whole grains, and vegetables to maintain your energy and health.";
+                } else if (gender === "female") {
+                    foodSuggestion.textContent = "Prioritize a balanced diet with a mix of protein, complex carbs, and healthy fats to support your well-being.";
+                } else {
+                    foodSuggestion.textContent = "Focus on a diverse diet that meets your nutritional needs and promotes overall health.";
+                }
+            } else {
+                if (gender === "male" || gender === "female") {
+                    foodSuggestion.textContent = "Choose nutrient-dense foods that provide essential vitamins and minerals for your age.";
+                } else {
+                    foodSuggestion.textContent = "Prioritize a balanced diet that supports your health and vitality in your senior years.";
+                }
+            }
+        }
+    
+    </script>
+</body>
+
+</html>
