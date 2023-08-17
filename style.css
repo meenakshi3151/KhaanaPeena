@@ -1,0 +1,717 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     
+}
+.top{
+    height:90px;
+    background-color: black;
+}
+
+
+h1{
+    font-size: 20px;
+    color:black;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    
+     position: relative;
+     float: left;
+     margin-left: 8px; 
+ }
+ 
+ .fa-solid{
+      font-size: 50px;
+      color: aqua;
+ }
+
+ .fa-bowl-food{
+   color:aqua;
+   font-size: 40px;
+ }
+ 
+ 
+ #top{
+   position: fixed;
+   cursor: pointer;
+   display: none;
+   top: 0;
+ }
+ 
+ 
+  html{
+     scroll-behavior: smooth;
+  }
+ body, h1, h2, h3, h4, h5, h6, p, ul, li {
+     margin: 0;
+     padding: 0;
+     max-width: 100%;
+     max-height: 100%;   
+     }
+ 
+ /* Add styling for the gray background */
+ .background {
+      background-image: url("./images/food.jpg");
+     /* );background-color: rgba(128, 128, 128, 0.5 */
+     
+     background-size: cover;
+     
+     width: 100%;
+     height: 100vh;
+   background-position:  relative;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     display: flex;
+  flex-direction: column;
+    
+}
+
+.overlay{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background-color: rgb(0,0,0,0.5);
+}
+
+.overlay-text{
+  position: absolute;
+  top:6%;
+  left:50%;
+  color:white;
+  width: 80%;
+  font-size: 24px;
+}
+
+ /* Add styling for the white box with 3D effect */
+ .main_page {
+     background-color: white;
+     padding: 20px;
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+     border-radius: 10px;
+     max-width: 900px;
+     width: 95%;
+     height: 85vh;
+    margin-right: 378px;
+    bottom:50px;
+    margin-top: 3%;
+ }
+ 
+
+ 
+ .name {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 20px;
+     padding: 10px;
+ }
+ 
+ .logo {
+     display: flex;
+     align-items: center;
+     margin-top: 0;
+     color:black;
+ }
+ 
+ .logo,#fa-solid{
+     color: black;
+     transition: 0.3s;
+ }
+
+
+ .logo,h1:hover
+ {
+   color:cornflowerblue;
+ }
+
+
+
+ .links ul {
+     list-style: none;
+     display: flex;
+    
+ }
+ 
+ .links li {
+     margin-right: 20px;
+
+ }
+ 
+ .links a {
+     text-decoration: none;
+     color: #333;
+     font-weight: bold;
+     position: relative;
+     
+ }
+ 
+ .links a:hover {
+     color: #ff7f50;
+ }
+ 
+ #query{
+      
+      width: 50%;
+      
+      font-size:large;
+      border-radius: 25x;
+ }
+ 
+ .main{
+       width: 15%;
+      background-color:yellow;
+      height: 2rem;
+   
+      color:darkmagenta;
+      transition: 0.3s;
+      font-size:medium;
+      border-left:0 ;
+      
+      border: none;
+      outline: none;
+      cursor: pointer;
+ }
+ 
+ .main:hover{
+        background-color:transparent;
+ }
+ 
+ 
+ .pic2 {
+     background-image: url("./images/chefs.jpg");
+     background-size: cover;
+     padding: 20px; 
+
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+     border-radius: 10px;
+     max-width: 900px;
+     width: 60%;
+     height:40vh;
+     margin-top:50px;
+     
+     margin-left:30px;
+     
+     
+ }
+ 
+ .pic2,h3{
+      color:cadetblue;
+      font-size: 40px;
+      font-weight:bolder;
+      z-index: 2;
+      float:top;
+ }
+
+ h3{
+    display: flex;
+color: black;
+text-decoration: dashed;
+ }
+
+ 
+ .pic,p{
+      font-size: 20px;
+      font-weight:bolder;
+ }
+ 
+ #send-button{
+      border-radius: 20px;
+      background-color: aliceblue;
+      font-size: 15px;
+      color:blue;
+      border:none;
+      height: 35px;
+      width:20%;
+      margin-bottom: 0px;
+ }
+ 
+ #send-button:hover{
+        background-color:transparent;
+ }
+ 
+ 
+ #send{
+     margin-left: 390px;
+     margin-top:60px;
+     margin-bottom: 10px;
+     float: right;
+     border-radius: 20px;
+      background-color: aliceblue;
+      font-size: 15px;
+      color:blue;
+      border:none;
+      height: 35px;
+      width:30%;
+ }
+
+
+ 
+ .recipes,h3{
+     /* margin-top: 50px;
+  margin-right:0;  */
+ /* margin-left:100%; */
+ /* float: right; */
+ /* margin-bottom: 100px; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+ }
+
+
+
+ .mid li{
+     list-style-type: none;
+     border:3px solid gray;
+     border-radius: 20px;
+     margin:6px;
+     padding:5px;
+ font-size: 19px;
+ /* font-family: sans-serif; */
+ /* background:rgb(27, 27, 27) ; */
+ background: linear-gradient(to right, rgba(30, 27, 121, 0.829) 50%, white 50%);            
+ background-size: 200%;
+ transition: all 0.5s ease-out;
+ width:270px;
+ margin-left: 80px;
+ display: flex;
+ flex-direction: column;
+ color: white;
+ /* background: linear-gradient(to right, rgb(190, 217, 18) 50%, white 50%);
+     background-size: 200%; /* Increase the background size */
+     /* transition: all 0.5s ease-out;   */
+ 
+ 
+ }
+ 
+ 
+ .mid li:hover {
+     background-position: right; /* Change background position on hover */
+     color:rgb(3, 3, 3); /* Change text color on hover */
+ }
+ 
+ .mid {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+ }
+ #send:hover{
+     background-color:transparent;
+ }
+ 
+
+ .img2{
+    min-height: 70px;
+    height: 95%;
+    width: 80px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 60px;
+    border-radius: 40px;
+    float: left;
+ }
+ 
+ .img2,img{
+     height: 175px;
+     width: 300px;
+     margin-top: 2x;
+     border-radius: 40px;
+     margin-right:150px;
+      margin-left: 10px; 
+     margin-bottom:16px;
+    }
+ 
+
+ 
+
+.bottom{
+    min-height: 50px;
+}
+
+.dishes{
+    margin-top: 168px;
+    float: left;
+    background-repeat: repeat;
+    border-radius: 20px;
+}
+
+
+
+.heading{
+  
+    position: relative;
+     top:50px;
+   
+  color:antiquewhite;
+      margin: auto;
+      font-size: 90px;
+}
+
+
+
+.heading:hover{
+    color:cornsilk;
+}
+
+.heading::before{
+     content: "";
+     position: absolute;
+     display: block;
+     height:2px;
+     background-color:cornflowerblue;
+     margin: auto;
+     align-items: center;
+     width:100%;
+     bottom: 0;
+     left:0;
+     transform: scaleX(0);
+     transition: transform 0.3s ease ;
+}
+
+.heading:hover::before{
+      transform : scaleX(1);
+}
+
+
+
+footer{
+    position: relative;
+    width: 100%;
+margin-left: 180px;
+    min-height: 600px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.floating{
+  min-height: 900px;
+  height: 95%; 
+  border-top: 200px;
+    display: flex;
+    flex-direction: column;
+  padding: 20px;
+  /* color: #333; */
+}
+
+ .float{
+     max-width: 70%;
+     padding: 10px 15px;
+     margin:10px;
+     border-radius: 10px;
+     text-align: centre;
+     /* color: #333; */
+    
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.float,p{
+    color:black;
+    
+}
+
+.float,h4{
+    align-items: center;
+text-align: center;
+
+}
+.move-left {
+  transform: translateX(-100%);
+}
+
+.move-right {
+  transform: translateX(100%);
+}
+
+.final-position{
+     transform: translateY(0);
+}
+.one,.two,.three,.four,.five{
+     font-style: normal;
+     font-weight: lighter;
+}
+.one{
+     background-color:white;
+     align-self: flex-start;
+   width:50%;
+   height: 70%;
+     margin-right: 1000px;
+     font-weight:lighter; 
+     background:
+      linear-gradient(red, transparent),
+      linear-gradient(to top left, lime, transparent),
+      linear-gradient(to top right, blue, transparent);
+  background-blend-mode: screen;
+}
+
+.two{
+    background-color:white;
+     align-self: flex-end;
+     margin-left: auto;
+     margin-left:1000px;
+     width:50%;
+     height: 70%;
+     background:
+      linear-gradient(red, transparent),
+      linear-gradient(to top left, lime, transparent),
+      linear-gradient(to top right, blue, transparent);
+  background-blend-mode: screen;
+  font-style: normal;
+  
+}
+
+.three{
+     background-color:white;
+     align-self: flex-start;
+     /* margin-left: auto; */
+     width:50%;
+   height: 70%;
+   background:
+      linear-gradient(red, transparent),
+      linear-gradient(to top left, lime, transparent),
+      linear-gradient(to top right, blue, transparent);
+  background-blend-mode: screen;
+       margin-right: 1000px;
+       
+}
+
+.four{
+     background-color:white;
+     align-self: flex-end;
+     /* margin-right: auto; */
+     margin-left:1000px;
+     width:50%;
+   height: 70%;
+     background:
+      linear-gradient(red, transparent),
+      linear-gradient(to top left, lime, transparent),
+      linear-gradient(to top right, blue, transparent);
+  background-blend-mode: screen;
+  font-family:none;
+     
+}
+
+.five{
+     background-color:white;
+     align-self: flex-start;
+     /* margin-left: auto; */
+     width:50%;
+     height: 70%;
+     background:
+      linear-gradient(red, transparent),
+      linear-gradient(to top left, lime, transparent),
+      linear-gradient(to top right, blue, transparent);
+  background-blend-mode: screen;
+   
+       margin-right: 1000px;
+}
+
+
+
+
+footer .social_icon,li
+{
+    list-style: none;
+    margin-top: 40px;
+    overflow: hidden;
+
+
+    margin-bottom: 0  auto;
+    
+}
+
+
+
+
+li{
+    display: inline;
+}
+
+footer .social_icon li a{
+   font-size: 2em;
+   color:white;
+   /* margin: 0 10px; */
+display: inline-block;
+   /* justify-content: space-between; */
+   align-items: center;
+   transition: 0.5s;
+  margin-bottom: 0px;
+   justify-content: center;
+   flex-wrap: wrap;
+  margin-left: 300px;
+   justify-content: space-around;
+   
+}
+
+footer .social_icon li a:hover{
+     transform: translateY(-10px);  
+}
+
+
+
+footer p{
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    font-size: 1.1rem;
+}
+
+
+  .slideshow-container {
+    margin-top: 100px;
+    max-width: 760px;
+    position: relative;
+   margin-left: 300px;
+   margin-top: 0;
+   width: 100%;
+   
+  }
+
+  .slideshow-container img {
+    width: 40rem;
+    height:25rem;
+    display: none;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-top: 10rem;
+  }
+
+.dots{
+   margin-left: 17rem;
+    
+}
+
+  .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    transition:background-color 0.6s ease ;
+    margin-bottom: 100px;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  .prev, .next {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    padding: 8px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .prev {
+    left: 5px;
+  
+  }
+
+  .next {
+    right: 105px;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .text{
+        color:crimson;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      
+  }
+ .tag{
+  padding-top: 30px;
+   color:aliceblue;
+   
+   text-align: center;
+   margin-left: 0px;
+ float: right;
+   
+   margin-left:50px;
+   
+   
+ }
+
+
+ .fade {
+    animation-name:fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+  .bottom{
+     min-height: 50vh;
+height: 95%;
+  background-color: #717171;
+  width: 209vh;
+  margin-left: 0;
+  margin-right: 10px;
+  overflow-x:auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-style: normal;
+  }
+
+  footer .combine{
+     display: inline;
+  }
+ 
+  .hide-1,.hide-2,.hide-3,.hide-4,.hide-5{
+    display: none;
+  }
+
+  #first li a:hover + .hide-1{
+       display: block;
+       color:whie;
+  }
+ 
+  #second:hover + .hide-2{
+    display: block;
+    color:whie;
+}
+
+#third:hover + .hide-3{
+  display: block;
+  color:whie;
+}
+
+#fourth:hover + .hide-4{
+  display: block;
+  color:whie;
+}
+
+#fifth:hover + .hide-5{
+  display: block;
+  color:whie;
+}
+
+  
