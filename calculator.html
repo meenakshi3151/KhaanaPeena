@@ -76,7 +76,7 @@
             const inch = parseFloat(document.getElementById("inch").value);
             const weight = parseFloat(document.getElementById("weight").value);
 
-            if (isNaN(feet) || isNaN(inch) || isNaN(weight)) {
+            if (isNaN(feet) || isNaN(inch) || isNaN(weight) || (feet<0) || (inch<0) || (weight<0)) {
                 alert("Please enter valid numeric values.");
                 return;
             }
