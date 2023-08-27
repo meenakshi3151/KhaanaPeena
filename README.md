@@ -25,9 +25,12 @@ Our search feature takes you on a culinary journey to explore the world of speci
 
 
 # Tech Stack
-* ### Frontend:HTML, CSS, JavaScript
- * ### Backend: Express.js
-* ### Real-time Communication: Socket.io
+* ### Frontend:
+* HTML, CSS, JavaScript
+ * ### Backend:
+ * Express.js
+* ### Real-time Communication:
+* Socket.io
 # Getting Started
 * Clone this repository: git clone https://github.com/your-username/khaanapeena.git
  * Navigate to the project folder: cd khaanapeena
