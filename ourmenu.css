@@ -1,0 +1,228 @@
+head{
+    /* width:500px;
+    height:500px; */
+    border:3px solid blue;
+    /* margin-left:200px; */
+     text-align: center;
+     justify-content: center;
+     /* margin-top: 20px; */
+     border-radius: 25px;
+     /* margin:10px; */
+     box-shadow: 5px 5px;
+
+}
+.links ul {
+    list-style: none;
+    display: flex;
+   margin-bottom: 50px;
+margin-left: 700px;
+}
+
+.links li {
+    margin-right: 20px;
+
+}
+
+.links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+    
+}
+
+.links a:hover {
+    color: #ff7f50;
+}
+.head span{
+      position:absolute;
+      inset:-100px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(./images/cre.jpg),linear-gradient(#f8f4f480,rgba(200,200,0,0.8));
+}
+
+h1{
+    font-size:30px;
+    font-weight: 100;
+
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+}
+input{
+    text-align: center;
+    flex: 1; /* Let the input take remaining width */
+  padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+    /* justify-content: center;
+    align-items: center; */
+/* margin-left:10px;
+margin-right:10px; */
+}
+
+p{
+    font-weight:lighter;
+    font-size: 19px;
+    color:rgb(37, 34, 34);
+    text-align: center;
+    margin-top:0px;
+
+}
+
+.page{
+    margin-top:130px;
+    background-color: white;
+    border:3px solid rgba(255,255,255,0.5);
+    animation: glowBorder 3s infinite alternate;
+        padding: 8px;
+    /* margin-top:180px; */
+    /* margin-bottom: 150px; */
+    height: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    margin-right: 450px;
+/* overflow-y:scroll; */
+background:transparent;
+    margin-left: 450px;
+;}
+
+span:nth-child(1){
+    background: conic-gradient()(
+    transparent,transparent,transparent,rgb(4, 73, 116)
+    );
+}
+
+span:nth-child(2){
+    background: conic-gradient()(
+    transparent,transparent,transparent,rgb(244, 15, 53)
+    );
+}
+
+span:nth-child(3){
+    background: conic-gradient()(
+    transparent,transparent,transparent,rgb(244, 244, 12)
+    );
+}
+
+span:nth-child(4){
+    background: conic-gradient()(
+    transparent,transparent,transparent,pink
+    );
+}
+.content{
+    text-align: center;
+    margin-left:0px;
+    margin-right:0px;
+    box-sizing: border-box;
+}
+li{
+    list-style-type: none;
+    font-size: 20px;
+text-align: center;
+text-decoration:wavy;
+
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+#myUL li:nth-child(odd) {
+  background-color:rgb(77, 122, 10); color:black;
+  width:100%;
+  border-radius: 3px;
+  
+  
+  }
+  
+  #myUL li:nth-child(even) {
+ background-color:grey; /* or any color you prefer for even elements */
+ color: black;
+width:100%;
+ border-radius: 3px;
+ 
+  }
+
+  ul{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+  }
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+  }
+ 
+.checked {
+    text-decoration: line-through;
+    color: #aaa;
+}
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+  @keyframes glowBorder {
+    0% {
+        box-shadow: 0 0 10px #4bcc20,0 0 10px #4bcc20,0 0 10px #4bcc20,0 0 10px #4bcc20;
+    }
+    100% {
+        box-shadow: 0 0 20px #3eec3e;
+    }
+}
+
+  /* Add a "checked" mark when clicked on */
+  /* ul li.checked::before {
+    content: '';
+    position: absolute;
+   
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  } */
+ .top{
+    color:green;
+    font-family:Impact;
+    align-items: center;
+font-style: italic;
+text-align: center;
+    font-size: 30px;
+    align-items: center;
+
+  }
+  .list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.note-box {
+    width: 20px;
+    height: 20px;
+    background-color: lightgray;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.note-text {
+    display: none;
+    width: 100%;
+}

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Document</title>
+   
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+
+</head>
+<body>
+  
+
+  <div id ="top"></div>
+    <div class="background">
+      
+      <div class = "overlay" id ="overlay"></div>
+      
+      <div class ="overlay-text"  style ="color:crimson; ">  <li><a href ="#social_icon">Connect With Us</a></li></div>
+      <div class="links">
+        <ul>
+            <li><a href="index.html">Home</a></li>&nbsp;
+            <li><a href="ourmenu.html">Create Menu</a></li>&nbsp;
+            <li><a href="videos.html">Our Menu</a></li>&nbsp;
+            <li><a href="calculator.html">KNY</a></li>&nbsp;
+            <li><a href ="#explore">Explore</a></li>&nbsp
+            <li><a href="./chat/public/index.html">Community Chat</a></li>&nbsp;
+        </ul>
+    </div>
+      <script>
+        const scrollIndicator = document.getElementById("overlay");
+   
+        function togglescrollIndicator()
+        {
+           if(window.scrollY >= 40)
+           {
+              scrollIndicator.style.display = "block";
+           }
+   
+           else{
+              scrollIndicator.style.display = "none";
+           }
+        }
+   
+        window.addEventListener("scroll", togglescrollIndicator);
+   
+        togglescrollIndicator();
+   
+    </script>
+
+        <div class="main_page">
+            <div class="name">
+                <div class="logo"><h1>🍽 KHAANAPEENA</h1></div>
+                <div class="template"></div>
+         
+            </div>
+            
+            <input type="search" id="query" name="q" placeholder="Know about your favourite meals from our recipes">
+
+            <button class="main" id ="main">Know &nbsp;<i class="fa fa-search ps-3"></i></button>
+            <script>
+              var searchbox = document.getElementById("query");
+            var searchbutton = document.getElementById("main");
+
+            searchbutton.addEventListener('click',function()
+            {
+              var searchquery = searchbox.value.toLowerCase();
+
+              if(searchquery === 'french')
+              {
+         redirecttoFrenchrecipe();
+              }
+
+              if(searchquery === 'italian')
+              {
+                redirecttoItalianrecipe();
+              }
+              if(searchquery === 'continental')
+              {
+                 redirecttoContinentalrecipe();
+              }
+
+              if(searchquery === 'mexican')
+              {
+                redirecttoMexicanrecipe();
+              }
+
+              if(searchquery === 'indian')
+              {
+                redirecttoIndianrecipe();
+              }
+              
+              if(searchquery === 'chinese')
+              {
+                redirecttoChineserecipe();
+              }
+
+              if(searchquery === 'japanese')
+              {
+                redirecttoJapaneserecipe();
+              }
+            });
+
+
+            function redirecttoFrenchrecipe()
+            {
+              window.location.href = 'https://www.allrecipes.com/recipes/721/world-cuisine/european/french/';
+            }
+
+
+             function redirecttoItalianrecipe()
+             {
+               window.location.href = 'https://www.greatitalianchefs.com/collections/traditional-italian-recipes';
+             }
+
+             function redirecttoContinentalrecipe()
+             {
+               window.location.href = 'https://www.maggi.in/recipes/continental/';
+             }
+
+             function redirecttoMexicanrecipe()
+             {
+              window.location.href = 'https://www.allrecipes.com/recipes/728/world-cuisine/latin-american/mexican/';
+             }
+
+             function redirecttoIndianrecipe()
+             {
+              window.location.href= 'https://www.indianhealthyrecipes.com/';
+             }
+              
+            function redirecttoChineserecipe()
+            {
+               window.location.href  = 'https://www.allrecipes.com/recipes/695/world-cuisine/asian/chinese/';
+            }
+            function redirecttoJapaneserecipe()
+            {
+               window.location.href = 'https://www.justonecookbook.com/';
+            }
+            </script>
+            <div class="mid">
+                
+                <div class ="pic2">
+                     
+                    <!-- <p style ="font-size: 30px; color:blue">A recipe is sculess. The essence of the recipe <br>
+                      must come </p> -->
+                      <button onclick="window.location.href='videos.html';" id="send">Check Our Recipe</button>
+                    
+                  <button onclick="window.location.href='https://www.incredibleindia.org/content/incredible-india-v2/en/experiences/food-and-cuisine.html';" id="send-button">Read More</button>
+          </div>
+          
+          <div class ="recipes">
+              <h3>Recipes🍔</h3>
+             <br>
+              
+                  <ul >
+                      <li>Italian</li>
+                      <li>Continental</li>
+                      <li>Mexican</li>
+                      <li>Indian</li>
+                      <li>Chinese</li>
+                  </ul>  
+
+          <div class ="img2">
+              <img src ="./images/cheffood.jpeg" alt = "chef">
+          </div>
+
+
+
+            </div>
+        </div>
+         
+        
+       
+        <section class = "dishes" >
+          <div class ="heading"><p style ="font-size: 25px; color: chocolate; " >Explore our menu</p></div>
+        
+          
+          <div    class ="slideshow-container">
+            <!-- <img class="slide" src="French.jpg" alt="Slide 1">
+            <img class="slide" src="Italian.jpg" alt="Slide 2">
+            <img class="slide" src="Chinese.jpg" alt="Slide 3">
+            <img class="slide" src="Japanese.jpg" alt="Slide 4">
+            <img class="slide" src="Indian.jpg" alt="Slide 5"> -->
+              
+            <div class = "mySlides fade">
+               <img src ="./images/French.jpg" alt ="French">
+               <div class = "text"></div>
+            </div>
+      
+      
+                  
+            <div class = "mySlides fade">
+              <img class = "slide"  src ="./images/Italian.jpg" alt ="Italian">
+              <div class = "text"></div>
+           </div>
+      
+               
+           <div class = "mySlides fade">
+            <img class ="slide" src ="./images/Chinese.jpg" alt ="Chinese">
+            <div class = "text"></div>
+         </div>
+      
+             
+         <div class = "mySlides fade">
+          <img class ="slide" src ="./images/Japanese.jpg" alt ="Japanese">
+          <div class = "text"></div>
+       </div>
+      
+            
+            <div class = "mySlides fade">
+               <img class ="slide" src ="./images/Indian.jpg" alt ="Indian">
+               <div class = "text"></div>
+            </div>
+             
+       <button class="prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+           <button class="next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+      
+      
+          <div  class ="dots" style ="text-align:centre">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+          </div>
+    
+        </div>
+        </section>
+      
+  
+      
+
+
+        <footer>
+            
+      <div class = "floating" id ="explore">
+       <div class = "float one "><h2>About KHAANAPEENA</h2>
+      <p style ="color:black; " id ="para">Khanapeena is a dynamic culinary website catering to cooking enthusiasts. It boasts an extensive recipe collection, covering diverse cuisines and skill levels. 
+         <br>
+        The platform's AI-powered chat interaction provides responsive assistance, offering answers, substitutions, and nutrition info. 
+        <br>
+        Beyond recipes, Khanapeena fosters community by enabling users to share their culinary creations and tips. It also supports meal planning and personalized recommendations, making it a one-stop hub for cooking inspiration, guidance, and connection.
+      </p>
+      
+      
+      </div>
+       <div class ="float two "><h2>In our group recipe chats, members can:</h2>
+
+        <p style ="color:black; " id ="para">Share Recipes: Group members can post their tried-and-tested recipes, along with detailed instructions and ingredient lists. This allows others to recreate the dishes and provides a platform for sharing unique family recipes or creative culinary concoctions.
+        <br>
+          Discuss Techniques: Cooking is an art, and group chats offer a forum to discuss various cooking techniques, tools, and methods. Members can seek advice, share hacks, and learn from each other's experiences, enhancing their culinary skills.
+        <br>
+          Swap Ideas: Group members often exchange ideas for ingredient substitutions, flavor pairings, and ways to customize recipes to suit dietary preferences or restrictions. This can spark creativity and inspire new culinary creations.
+      </p>
+        </div>
+       <div class ="float three "><h2>By creating a menu by our Create menu:</h2>
+
+          <p style="color: black;" id ="para">Efficient Planning: A well-thought-out menu helps you streamline your cooking process by deciding in advance what meals you'll prepare each day. This eliminates last-minute scrambling and reduces decision fatigue, making weeknight dinners more manageable.
+        <br>
+        Balanced Nutrition: Planning your meals ahead allows you to create a balanced and nutritious diet. You can strategically incorporate a variety of proteins, vegetables, whole grains, and other essential nutrients throughout the week.
+        <br>
+        Cost Savings: By planning your meals, you can make a comprehensive grocery list based on the recipes you intend to prepare. This prevents impulsive purchases and ensures you buy only what you need, leading to potential cost savings.</p>
+      
+       </div>
+        <div class ="float four " >
+        <h2>Know Yourself</h2>
+       <p style ="color: black;" id ="para">Knowing your Body Mass Index (BMI) is a valuable step in understanding and assessing your overall health and the relationship between your weight and height.
+        BMI is a numerical value derived from a simple formula that provides an indication of whether your weight falls within a healthy range for your height. This measurement has several uses in evaluating your health and guiding your wellness journey.
+<br>
+<br>
+        <h2>By calculating your BMI:</h2>
+        <br>
+<p style ="color: black;" id="para">Health Assessment: BMI serves as a quick and initial indicator of your body composition. It helps you determine whether you are underweight, normal weight, overweight, or obese based on established ranges.
+  <br>
+  Weight Management: Monitoring your BMI helps you set realistic weight goals and track progress. Whether you're aiming to lose, maintain, or gain weight, understanding your BMI provides insights into the necessary steps to achieve your desired weight.
+    <br>
+  Also we are providing encouraging qoutes to everyone to look after their health.</p>
+</div>
+       <div class ="float five ">
+        <h2>Community Chat</h2>
+        <p style ="color:black;" id ="para">The community chat feature on our recipe website offers a dynamic and collaborative platform for food enthusiasts of all levels to engage. Here, users can post questions, seek advice, 
+          and share their culinary experiences. What makes this feature unique is its inclusive nature, allowing anyone to contribute answers and insights to the questions posed by others. This fosters a vibrant exchange of ideas,
+           tips, and techniques, creating a virtual gathering space where everyone benefits from the collective wisdom of the community. Whether you're a seasoned chef or a beginner in the kitchen, our community chat empowers you to explore,
+            learn, and connect with fellow food lovers while browsing through a rich tapestry of culinary inquiries and responses. </p>
+       </div>
+
+ </div>
+ <script>
+        
+ </script>
+
+     <section class ="bottom" id = "bottom">
+           <div class = "tag">
+              <h2 >Share Your Menu with Us <br></h2>
+              <br>
+              
+              <h2 >Tell Us About It</h2>
+           </div>
+      
+          
+              <ul class ="social_icon" id ="social_icon">
+                <li > <a href ="#"><ion-icon name="mail-outline" id ="fifth"></ion-icon></a></li>
+ 
+             <li><a href ="#"><ion-icon name="logo-whatsapp" id ="fifth"></ion-icon></a></li>
+            <li> <a href = "#"><ion-icon name="logo-twitter" id ="second"></ion-icon></a></li>
+           
+            <li><a href = "#"><ion-icon name="logo-linkedin" id ="third"></ion-icon></a></li>
+          
+            <li> <a href = "#"><ion-icon name="logo-instagram" id ="fourth"></ion-icon></a></li>
+        
+            
+            
+          </ul>
+      
+        
+         
+           <br>
+           <br>
+          <p>©2023 KHAANAPEENA Family| All Rights Reserved</p>
+          </section>
+        </footer>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+       <script>
+
+          let slideIndex = 1;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000);  // Change image every 2 seconds
+}
+
+
+         
+       </script>
+</body>
+</html>
